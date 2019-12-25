@@ -1,46 +1,97 @@
 @media screen and (max-width: 1300px)
- .menu
-  font-size: 0.8rem
+   .menu
+      font-size: 0.8rem
 
 @media screen and (max-width: 1199px)
- html 
-  font-size: 12px
- nav
-  &__item
-   margin-right: 1rem
+   html 
+      font-size: 12px
+   nav
+      &__item
+         margin-right: 1rem
   
 @media screen and (max-width: 992px)
- .nav
-  display: none
- .hero
-  &__instagram
-   display: none
-  &__content
-   margin: auto
+   .nav
+      display: none
+   .hero
+      &__instagram
+         display: none
+      &__content
+         margin: auto
 @media screen and (max-width: 570px)
- .contacts
-  &__phone
-   margin-right: 0
-   color: $light
-   text-decoration: none
-  &__button
-   display: none
- .title
-  font-size: 1.64rem
- .hero
-  &__scroll-down
-   display: none
-  &__content
-   max-width: 22.86rem
-  &__text
-   font-size: 1.29rem
-   margin-bottom: 2.28rem
-  &__button
-   display: block
-   min-width: 22.86rem
-   margin-bottom: 1.85rem
+   .contacts
+      &__phone
+         margin-right: 0
+         color: $light
+         text-decoration: none
+      &__button
+         display: none
+   .title
+      font-size: 1.64rem
+   .hero
+      &__scroll-down
+         display: none
+      &__content
+         max-width: 22.86rem
+      &__text
+         font-size: 1.29rem
+         margin-bottom: 2.28rem
+      &__button
+         display: block
+         min-width: 22.86rem
+         margin-bottom: 1.85rem
 
 @media screen and (max-height: 520px)
- .hero
-  &__scroll-down
-   display: none
+   .hero
+      &__scroll-down
+         display: none
+
+// media for types
+
+@media screen and (max-width: 992px)
+   .card__title
+      font-size: 1.05rem
+
+@media screen and (max-width: 767px)
+   .col
+      width: 100%
+   .row
+      flex-direction: column
+      align-items: center
+   .types__card
+      margin-bottom: 5rem
+   .card
+      &__text
+         margin-left: 0
+      &__title
+         font-size: 1.29rem
+         margin-bottom: 0.8rem
+      &__image
+         display: block
+         margin: auto
+         width: 100%
+   
+// media for design
+
+@media screen and (min-width: 767px)
+   .section-title
+      &__description
+         font-size: 1.5rem
+         line-height: 135.84%
+         //margin: auto
+         margin-top: 1.2rem
+         max-width: 58.8rem
+   .design
+      background-color: $light
+      &__section-title
+         color: $dark
+         max-width: 55rem
+         margin: 2.78rem auto
+   .row
+      flex-direction: row
+      justify-content: space-between
+   .card
+      flex-basis: 32%
+
+// -- media for design
+
+   
