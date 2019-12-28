@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(event) {
- const modal = document.querySelector('.modal');
- const modalBtn = document.querySelectorAll('[data-toggle=modal]');
- const closeBtn = document.querySelector('.modal__close');
+ const modal = document.querySelector('.modal'),
+       modalBtn = document.querySelectorAll('[data-toggle=modal]'),
+       closeBtn = document.querySelector('.modal__close'),
+       contactsButton = document.querySelector('.contacts__button');
 
 /* const switchModal = () => {
   modal.classList.toggle('modal--visible');
@@ -20,27 +21,28 @@ document.addEventListener('DOMContentLoaded', function(event) {
   modal.classList.remove(modalSwitchClass);
  }
 
-//закрытие по клавише 
+// Закрытие по произвольной клавише 
 document.addEventListener('keypress', function(e) {
   if(e.key == "1"){
    closeModal();
   }
 });
 
-/*
-document.addEventListener('click', function(event) {
- var m = document.body.getElementsByClassName('modal');
- console.log(m);
- if (!m.is(event.target) && m.has(event.target).length === 0) {
-  closeModal();
- };
-});
+// Закрытие по клавише ESC
+document.onkeydown = function (evt) {
+  if (evt.keyCode == 27) {
+    closeModal();
+  }
+};
 
-document.addEventListener('click', function(event) {
- var m=document.getElementsByClassName('modal');
- if (!m.matches(event.target)) m.style.display='none';
-});*/
-
+// Закрытие по клику мимо модального окна
+ modal.addEventListener('click', (event) => {
+  let target = event.target;
+  if (target.classList.contains('modal__close')) {
+    closeModal();
+  } else if (target.classList.contains('modal') && !target.classList.contains('modal__dialog')) {
+    closeModal(); }
+ });
 
 modalBtn.forEach(element => {
  element.addEventListener('click', openModal);
@@ -48,13 +50,3 @@ modalBtn.forEach(element => {
 
 closeBtn.addEventListener('click', closeModal); //Закрывает модальное окно через кнопку Х в модальном окне
 });
-
-/*
- modalBtn.forEach(element => {
-  element.addEventListener('click', switchModal);
- });
-
- closeBtn.addEventListener('click', switchModal); //Закрывает модальное окно через кнопку Х в модальном окне
-});
-
-*/
