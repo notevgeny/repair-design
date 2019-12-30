@@ -370,6 +370,33 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.back-top {
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 10; }
+  .back-top__scroll {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2rem;
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid #e3b873;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none; }
+    .back-top__scroll::before {
+      content: '';
+      background: url(../img/arrow-down.svg) no-repeat center;
+      transform: rotateX(180deg);
+      width: 50px;
+      height: 50px; }
+
 .container {
   width: 85%;
   max-width: 1256px;

@@ -1,13 +1,10 @@
+/* /// Чистый JS ///
 document.addEventListener('DOMContentLoaded', function(event) {
  const modal = document.querySelector('.modal'),
        modalBtn = document.querySelectorAll('[data-toggle=modal]'),
        closeBtn = document.querySelector('.modal__close'),
        contactsButton = document.querySelector('.contacts__button');
 
-/* const switchModal = () => {
-  modal.classList.toggle('modal--visible');
- }
-*/
  let modalSwitchClass = 'modal--visible';
 
 
@@ -37,10 +34,10 @@ document.onkeydown = function (evt) {
 
 // Закрытие по клику мимо модального окна
  modal.addEventListener('click', (event) => {
-  let target = event.target;
-  if (target.classList.contains('modal__close')) {
+  let target = event.target; // отслеживаем цель события - клик, записываем его в переменную
+  if (target.classList.contains('modal__close')) { // если в переменной присутствует класс
     closeModal();
-  } else if (target.classList.contains('modal') && !target.classList.contains('modal__dialog')) {
+  } else if (target.classList.contains('modal') && !target.classList.contains('modal__dialog')) { // если же переменная содержит класс modal и не содержит класс модального окна
     closeModal(); }
  });
 
@@ -49,4 +46,61 @@ modalBtn.forEach(element => {
 });
 
 closeBtn.addEventListener('click', closeModal); //Закрывает модальное окно через кнопку Х в модальном окне
+});
+
+*/
+
+
+/* Jquery код */
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle="modal"]'),
+      closeBtn = $('.modal__close'),
+      contactsButton = $('.contacts__button');
+
+   // Открывает модальное окно
+  modalBtn.on('click', function () {
+    modal.addClass('modal--visible');
+    return false;
+  });
+
+   // Закрывает модальное окно
+  closeBtn.on('click', function () {
+    modal.removeClass('modal--visible');
+    return false;
+  });
+
+// Закрытие по клавише ESC
+  $(document).keydown(function(evt) {
+    if (evt.keyCode === 27) {
+      evt.stopPropagation();
+      modal.removeClass('modal--visible');
+    }
+  });
+
+  // Закрытие по клику мимо модального окна
+  $('.modal').click(function(e) {
+		if ($(e.target).closest('.modal__dialog').length == 0) {
+			modal.removeClass('modal--visible');					
+		}
+  });
+  
+  // Скролл наверх
+  $(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-top').fadeIn();
+        } else {
+            $('.back-top').fadeOut();
+        }
+    });
+
+    $('.back-top a').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+
 });
