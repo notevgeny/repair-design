@@ -101,6 +101,28 @@ $(document).ready(function () {
         }, 800);
         return false;
     });
-});
+  });
+  // Swiper Slider
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+     
+  })
+
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + bullets.width() + 30)
+  bullets.css('left', bullets.width() + 10 )
+  
 
 });
