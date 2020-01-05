@@ -1,5 +1,5 @@
 .sixsteps
- &--wrapper
+ &__wrapper
   margin-top: -40rem
   padding-top: 32rem
 .swiper
@@ -19,6 +19,12 @@
   width: 33%
   margin-bottom: 2rem
   color: rgba($light, 0.4)
+  &:first-child, &:nth-child(4)
+    animation: invite 2s ease-in
+  &:nth-child(2), &:nth-child(5)
+    animation: invite 4s ease-in
+  &:nth-child(3), &:last-child
+    animation: invite 6s ease-in
  &__number
   position: relative
   font-size: 1.1rem

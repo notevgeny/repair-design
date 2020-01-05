@@ -52,6 +52,22 @@
    .projects__wrap
       padding-top: 0
       padding-bottom: 2rem
+   .control
+      background-color: $dark
+      &__section-title
+         margin-top: 0
+      &__text
+         color: $light
+         max-width: 100%
+      &__label
+         color: rgba($light, 0.5)
+      &__policy
+         &-label
+            color: $light
+      &__heading
+         margin-top: 0
+
+   
 
 @media screen and (max-width: 767px)
    .col, .col-30, .col-50, .col-32
@@ -83,7 +99,19 @@
          padding: 0px 4rem
    .swiper-slide img
       padding-top: 2rem
-// media for design
+   .sixsteps
+      &__wrapper
+         margin-top: -35rem
+   .control
+      &__input-group
+         flex-basis: 100%
+         margin-bottom: 4rem
+      &__button
+         order: 5
+         margin: auto
+         margin-top: 4rem
+         margin-bottom: -4rem
+         padding: 1.2857rem 15rem
 
 @media screen and (min-width: 767px)
    .section-title
@@ -105,4 +133,8 @@
    .card
       flex-basis: 32%
 // -- media for design
-  
+
+@media screen and (max-width: 520px)
+   .control
+      &__button
+         padding: 1.2857rem 8rem
