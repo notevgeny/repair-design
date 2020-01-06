@@ -8,6 +8,9 @@
    nav
       &__item
          margin-right: 1rem
+   .team
+      &__activity
+         left: -10px
   
 @media screen and (max-width: 992px)
    .nav
@@ -17,6 +20,11 @@
          display: none
       &__content
          margin: auto
+   .team
+      &__name
+         font-size: 1.185rem
+      &__activity
+         left: -10px
 @media screen and (max-width: 570px)
    .contacts
       &__phone
@@ -75,6 +83,8 @@
             color: $light
       &__heading
          margin-top: 0
+   .team
+      background-color: $dark
 
    
 
@@ -111,6 +121,7 @@
    .sixsteps
       &__wrapper
          margin-top: -35rem
+         padding-bottom: 10rem
    .work-order
       &__item
          width: 50%
@@ -126,6 +137,20 @@
          margin-top: 4rem
          margin-bottom: -2rem
          padding: 1.2857rem 15rem
+   .team
+      &__people
+         margin-bottom: 7rem
+      &__activity
+         left: 160px
+      &__section
+         &-title
+            margin-top: 0
+      &__title
+         &-heading
+            margin-top: 0
+      &__name
+         font-size: 1.285rem
+      
 
 @media screen and (min-width: 767px)
    .section-title
@@ -152,3 +177,23 @@
    .control
       &__button
          padding: 1.2857rem 8rem
+      &__title
+         &-heading
+            margin-top: 0
+   .team
+      &__activity
+         left: 0
+      &__section
+         &-title
+            margin-top: 0
+      &__title
+         &-heading
+            margin-top: 0
+
+@media screen and (max-width: 320px)
+   .team
+      &__activity
+         left: -10px
+      &__title
+         &-heading
+            margin-top: 0
