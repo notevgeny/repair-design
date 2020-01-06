@@ -900,9 +900,10 @@ img {
     padding: 4.285rem 0; }
 
 .sixsteps__wrapper {
-  margin-top: -40rem;
+  margin-top: -38rem;
   padding-top: 32rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  background: #131313 url("../img/form-lines.svg") no-repeat center/cover; }
 
 .swiper-slide__heading--block {
   display: block;
@@ -1043,7 +1044,15 @@ img {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .sixsteps {
+    display: none; }
+  .footer__button {
+    padding: 1.35rem 6.4rem; }
+  .footer__input {
+    border-bottom: 1px solid #ffffff; }
+    .footer__input-group {
+      flex-basis: 100%; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
@@ -1054,7 +1063,7 @@ img {
     font-size: 1.05rem; }
   .projects__wrap {
     padding-top: 0;
-    padding-bottom: 2rem; }
+    padding-bottom: 4rem; }
   .control {
     background-color: #131313; }
     .control__section-title {
@@ -1099,6 +1108,10 @@ img {
     padding-top: 2rem; }
   .sixsteps__wrapper {
     margin-top: -35rem; }
+  .work-order__item {
+    width: 50%; }
+  .control__text {
+    font-size: 1.2rem; }
   .control__input-group {
     flex-basis: 100%;
     margin-bottom: 4rem; }
@@ -1106,7 +1119,7 @@ img {
     order: 5;
     margin: auto;
     margin-top: 4rem;
-    margin-bottom: -4rem;
+    margin-bottom: -2rem;
     padding: 1.2857rem 15rem; } }
 
 @media screen and (min-width: 767px) {
