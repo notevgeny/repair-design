@@ -139,5 +139,90 @@ $(document).ready(function () {
   );
   wow.init();
 
+  // Валидация формы в модальном окне
+  $(".modal__form").validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userPhone: "Заполните поле",
+      userName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Имя должно быть минимум {0} символа!"),
+        maxlength: jQuery.validator.format("Имя должно быть не более {0} символов!")
+      },
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный Email в формате name@domain.com"
+      }
+    }
+  });
+
+  // Валидация для формы в блоке control
+  $(".control__form").validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило, converted to {required:true}
+      cUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      cUserPhone: "required",
+      // правило-объект (блок)
+    },
+    messages: {
+      cUserPhone: "Заполните поле",
+      cUserName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Имя должно быть минимум {0} символа!"),
+        maxlength: jQuery.validator.format("Имя должно быть не более {0} символов!")
+      },
+    }
+  });
+
+  // Валидация для формы в блоке footer
+  $(".footer__form").validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило, converted to {required:true}
+      fUserName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      fUserPhone: "required",
+      fUserQuestion: "required",
+      // правило-объект (блок)
+    },
+    messages: {
+      fUserPhone: "Заполните поле",
+      fUserQuestion: "Напишите свой вопрос",
+      fUserName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Имя должно быть минимум {0} символа!"),
+        maxlength: jQuery.validator.format("Имя должно быть не более {0} символов!")
+      },
+    }
+  });
+
+
+  //Маска для телефона
+  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (000) 000-00-00"});
 
 });

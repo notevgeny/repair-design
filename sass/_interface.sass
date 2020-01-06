@@ -42,6 +42,7 @@
   &__label
     display: flex
     align-items: center
+    font-size: 1.142rem
     &::before
       content: ''
       width: 18px
@@ -50,6 +51,8 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+    &--center
+      justify-content: center
 .back-top
   display: none
   position: fixed
@@ -76,3 +79,9 @@
       transform: rotateX(180deg)
       width: 50px
       height: 50px
+div
+  &.invalid
+    color: tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
