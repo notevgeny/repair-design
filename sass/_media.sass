@@ -115,11 +115,34 @@
          display: block
          &::after
             display: none
+      &__aim
+         display: inline-block
+         &::after
+            display: none
       &__text
          max-width: 100%
          padding: 0px 4rem
-   .swiper-slide img
-      padding-top: 2rem
+   .swiper
+      &-container
+         text-align: center
+      &-slide__heading
+         font-size: 1.585rem
+      &-slide__value
+         font-size: 1.385rem
+      &-slide img
+         padding-top: 2rem
+      &-hideonmobile
+         display: none
+      &-hideondesktop
+         display: block
+      &-button-prev
+         left: 150px
+      &-button-next
+         left: 340px !important
+   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 8px
+   .swiper-container-horizontal>.swiper-pagination-bullets
+      left: 230px !important
    .sixsteps
       &__wrapper
          margin-top: -35rem
@@ -195,3 +218,47 @@
       &__title
          &-heading
             margin-top: 0
+
+@media screen and (max-width: 640px)
+   .swiper
+      &-button-prev
+         left: 100px
+      &-button-next
+         left: 290px !important
+   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 8px
+   .swiper-container-horizontal>.swiper-pagination-bullets
+      left: 180px !important
+
+@media screen and (max-width: 520px)
+   .swiper
+      &-button-prev
+         left: 70px
+      &-button-next
+         left: 260px !important
+   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 8px
+   .swiper-container-horizontal>.swiper-pagination-bullets
+      left: 150px !important
+
+@media screen and (max-width: 420px)
+   .swiper
+      &-button-prev
+         left: 50px
+      &-button-next
+         left: 240px !important
+   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 8px
+   .swiper-container-horizontal>.swiper-pagination-bullets
+      left: 130px !important
+
+@media screen and (max-width: 320px)
+   .swiper
+      &-button-prev
+         left: 20px
+      &-button-next
+         left: 210px !important
+   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 8px
+   .swiper-container-horizontal>.swiper-pagination-bullets
+      left: 100px !important
