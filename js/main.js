@@ -100,7 +100,7 @@ $(document).ready(function () {
         }, 800);
         return false;
     });
-  // Swiper Slider
+  // Swiper Slider projects
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     loop: true,
@@ -121,7 +121,31 @@ $(document).ready(function () {
   var bullets = $('.swiper-pagination');
 
   next.css('left', prev.width() + bullets.width() + 40)
-  bullets.css('left', bullets.width() + 10 )
+  bullets.css('left', bullets.width() + 10 );
+
+
+  // Swiper Slider sixsteps
+  var notMySwiper = new Swiper ('.swiper-contain', {
+    // Optional parameters
+    loop: true,
+    pagination: {
+      el: '.swiper-paginate',
+      //el: this.querySelector('.swiper-pagination'),
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-right',
+      prevEl: '.swiper-button-left',
+    },
+     
+  })
+
+  var next1 = $('.swiper-button-right');
+  var prev1 = $('.swiper-button-left');
+  var bullets1 = $('.swiper-paginate');
+
+  /*next1.css('left', prev1.width() + bullets1.width())
+  bullets1.css('left', bullets1.width() - 1000)*/
   
   var wow = new WOW(
     {

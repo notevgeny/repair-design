@@ -68,8 +68,8 @@
          display: block
          min-width: 22.86rem
          margin-bottom: 1.85rem
-   .sixsteps
-      display: none
+   /*.sixsteps
+      display: none*/
    .footer
       &__button
          padding: 1.35rem 6.4rem
@@ -250,6 +250,16 @@
          &-heading
             margin-top: 0
 
+@media screen and (max-width: 992px)
+   .swiper-container-horizontal > .swiper-paginate-bullets
+      left: 50px
+   .swiper-button-right
+      left: 155px
+   @media screen and (max-width: 767px)
+      .swiper-button-right
+         left: 400px
+      .swiper-button-left
+         left: 160px
 @media screen and (max-width: 640px)
    .footer
       &__map
@@ -263,7 +273,10 @@
       margin: 0 8px
    .swiper-container-horizontal>.swiper-pagination-bullets
       left: 180px !important
-
+   .swiper-button-right
+         left: 350px
+   .swiper-button-left
+         left: 110px
 @media screen and (max-width: 520px)
    .swiper
       &-button-prev
@@ -296,3 +309,4 @@
       margin: 0 8px
    .swiper-container-horizontal>.swiper-pagination-bullets
       left: 100px !important
+   

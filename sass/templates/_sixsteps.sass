@@ -21,6 +21,8 @@
   width: 33%
   margin-bottom: 2rem
   color: rgba($light, 0.4)
+  &-active
+    color: rgba($light, 1)
   &:first-child, &:nth-child(4)
     animation: invite 2s ease-in
   &:nth-child(2), &:nth-child(5)
@@ -50,5 +52,45 @@
     margin-bottom: 1.3rem
     font-family: 'Yeseva One', cursive
     font-size: 1.2rem
-
-   
+// стили для второго слайдера
+.swiper
+ &-contain
+   margin-left: auto
+   margin-right: auto
+   position: relative
+   overflow: hidden
+   list-style: none
+   padding: 0
+   z-index: 1
+ &-button
+  &-left, &-right
+   background-size: 42px
+   width: 42px
+   height: 14px
+   bottom: 10px
+   top: auto
+   position: absolute
+   z-index: 10
+   cursor: pointer
+   display: flex
+   align-items: center
+   justify-content: center
+   &::after
+    display: none
+  &-left
+   left: 0
+   background: url('../img/arrow-prev.svg') no-repeat center
+  &-right
+   background: url('../img/arrow-next.svg') no-repeat center
+   left: 170px
+ &-paginate
+  &-bullet
+   background-color: rgba($light, 0.3)
+   &-active
+    background-color: $light
+.swiper-container-horizontal>.swiper-paginate-bullets
+ width: auto
+ position: absolute
+ left: 60px
+.swiper-container-horizontal>.swiper-scrollbar
+  display: none
