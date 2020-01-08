@@ -28,6 +28,8 @@
   font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
+  &-group
+    position: relative
   &--light
     &::placeholder
       color: $light
@@ -82,6 +84,8 @@
 div
   &.invalid
     color: tomato
+    position: absolute
+    bottom: -20px
 input
   &.invalid
     border-bottom: 1px solid tomato

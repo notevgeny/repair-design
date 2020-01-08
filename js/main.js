@@ -106,6 +106,7 @@ $(document).ready(function () {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
+      //el: this.querySelector('.swiper-pagination'),
       type: 'bullets',
     },
     navigation: {

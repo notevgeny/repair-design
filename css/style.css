@@ -349,6 +349,8 @@ template {
   font-size: 1.285rem;
   color: #ffffff;
   padding: 0.5rem 0; }
+  .input-group {
+    position: relative; }
   .input--light::placeholder {
     color: #ffffff; }
 
@@ -401,7 +403,9 @@ template {
       height: 50px; }
 
 div.invalid {
-  color: tomato; }
+  color: tomato;
+  position: absolute;
+  bottom: -20px; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
@@ -749,7 +753,8 @@ img {
   .control__input-group {
     display: flex;
     flex-direction: column;
-    flex-basis: 30%; }
+    flex-basis: 30%;
+    position: relative; }
 
 .video__play {
   position: relative;
@@ -972,16 +977,7 @@ img {
   position: relative;
   text-align: center;
   width: 272px;
-  margin: auto;
-  /*&--project
-   &::before
-    content: ''
-    background: #e3b873 url(../img/team/project.svg) no-repeat center;
-    top: -40px
-    left: 20px
-    position: absolute
-    width: 5rem
-    height: 5rem*/ }
+  margin: auto; }
 
 .team__image {
   display: block;
@@ -1010,11 +1006,12 @@ img {
 .team__activity {
   position: absolute;
   top: -40px;
-  left: 20px;
+  left: -35px;
   width: 5rem;
   height: 5rem;
   background: #e3b873;
-  display: flex; }
+  display: flex;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
   .team__activity-icon {
     margin: auto; }
 
@@ -1081,12 +1078,13 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input:last-of-type {
-    margin-bottom: 1rem; }
-  .modal__input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3.43rem; }
+  .modal__input {
+    /*&:last-of-type
+   margin-bottom: 1rem*/ }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.43rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -1101,8 +1099,10 @@ img {
     font-size: 12px; }
   nav__item {
     margin-right: 1rem; }
+  .team__people {
+    width: 250px; }
   .team__activity {
-    left: -10px; } }
+    left: -30px; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1114,7 +1114,7 @@ img {
   .team__name {
     font-size: 1.185rem; }
   .team__activity {
-    left: -10px; } }
+    left: -25px; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
