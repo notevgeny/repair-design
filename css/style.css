@@ -868,12 +868,28 @@ img {
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
-  .footer__wrap {
-    background: #181818 url("../img/form-lines.svg") no-repeat center;
+  .footer__wrap, .footer__contacts {
     max-width: 63.07rem;
     margin: auto;
     padding: 2.5rem;
     margin-bottom: 3.714rem; }
+  .footer__wrap {
+    background: #181818 url("../img/form-lines.svg") no-repeat center;
+    margin-top: -20rem; }
+  .footer__contacts {
+    text-align: center;
+    margin-bottom: 3.07rem; }
+  .footer__location, .footer__tel {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #e3b873;
+    margin: 0 auto; }
+  .footer__tel {
+    margin-bottom: 1.857rem; }
+  .footer__socials-icon {
+    margin-right: 1.05rem; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -909,6 +925,11 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    height: 33.21rem;
+    max-width: 66.07rem;
+    margin: auto;
+    margin-bottom: 4.8rem; }
 
 .sixsteps__wrapper {
   margin-top: -38rem;
@@ -1090,9 +1111,65 @@ img {
   .modal__button {
     align-self: flex-end; }
 
+.clients__wrapper {
+  padding-bottom: 30rem; }
+
+.clients__description {
+  max-width: 25.7rem !important;
+  margin-bottom: 2.785rem; }
+
+.clients__card {
+  position: relative; }
+
+.clients__person {
+  width: 30%;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(255, 255, 255, 0.04);
+  position: relative;
+  padding: 1.71rem 2.285rem 4.5rem 1.43rem; }
+  .clients__person-title {
+    display: flex;
+    align-items: center;
+    font-family: 'Yeseva One', cursive; }
+    .clients__person-title h4 {
+      font-size: 1.285rem;
+      line-height: 1.64rem;
+      font-weight: normal;
+      color: #131313; }
+  .clients__person-img {
+    border-radius: 50%;
+    margin-right: 1.64rem; }
+  .clients__person-text {
+    color: #959595;
+    font-size: 1.07rem;
+    line-height: 180%; }
+  .clients__person-details {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background-color: #e3b873;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
+  .clients__person-square, .clients__person-duration {
+    padding: 1rem 1.135rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.214rem;
+    line-height: 1.714rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: #ffffff; }
+    .clients__person-square span, .clients__person-duration span {
+      margin-left: 1.2rem; }
+  .clients__person-square {
+    border-right: 1px solid #ffffff; }
+
 @media screen and (max-width: 1300px) {
   .menu {
-    font-size: 0.8rem; } }
+    font-size: 0.8rem; }
+  .clients__person-title h4 {
+    font-size: 1.1rem; } }
 
 @media screen and (max-width: 1199px) {
   html {
@@ -1114,7 +1191,19 @@ img {
   .team__name {
     font-size: 1.185rem; }
   .team__activity {
-    left: -25px; } }
+    left: -25px; }
+  .clients__section-title {
+    padding-top: 3rem; }
+  .clients__person-title h4 {
+    font-size: 1.285rem; }
+  .clients__card {
+    flex-wrap: wrap; }
+  .clients__person {
+    width: 50%;
+    margin-bottom: 3rem; }
+    .clients__person-square, .clients__person-duration {
+      font-size: 1rem;
+      padding: 1rem 0.8rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1248,7 +1337,13 @@ img {
   .team__title-heading {
     margin-top: 0; }
   .team__name {
-    font-size: 1.285rem; } }
+    font-size: 1.285rem; }
+  .clients__description {
+    font-size: 1.5rem; }
+  .clients__wrapper {
+    padding-bottom: 25rem; }
+  .clients__person {
+    width: 100%; } }
 
 @media screen and (min-width: 767px) {
   .section-title__description {
@@ -1276,13 +1371,17 @@ img {
   .team__section-title {
     margin-top: 0; }
   .team__title-heading {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .footer {
+    background: #131313; } }
 
 @media screen and (max-width: 320px) {
   .team__title-heading {
     margin-top: 0; } }
 
 @media screen and (max-width: 640px) {
+  .footer__map {
+    height: 23.21rem; }
   .swiper-button-prev {
     left: 100px; }
   .swiper-button-next {

@@ -1,6 +1,10 @@
 @media screen and (max-width: 1300px)
    .menu
       font-size: 0.8rem
+   .clients
+      &__person-title
+         & h4
+            font-size: 1.1rem
 
 @media screen and (max-width: 1199px)
    html 
@@ -27,6 +31,21 @@
          font-size: 1.185rem
       &__activity
          left: -25px
+   .clients
+      &__section-title
+         padding-top: 3rem
+      &__person-title
+         & h4
+            font-size: 1.285rem
+      &__card
+         flex-wrap: wrap
+      &__person
+         width: 50%
+         margin-bottom: 3rem
+         &-square, &-duration
+            font-size: 1rem
+            padding: 1rem 0.8rem
+
 @media screen and (max-width: 570px)
    .contacts
       &__phone
@@ -177,6 +196,13 @@
             margin-top: 0
       &__name
          font-size: 1.285rem
+   .clients
+      &__description
+         font-size: 1.5rem
+      &__wrapper
+         padding-bottom: 25rem
+      &__person
+         width: 100%
       
 
 @media screen and (min-width: 767px)
@@ -214,6 +240,9 @@
       &__title
          &-heading
             margin-top: 0
+   .footer
+      background: $dark
+
 
 @media screen and (max-width: 320px)
    .team
@@ -222,6 +251,9 @@
             margin-top: 0
 
 @media screen and (max-width: 640px)
+   .footer
+      &__map
+         height: 23.21rem
    .swiper
       &-button-prev
          left: 100px
