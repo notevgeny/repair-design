@@ -877,7 +877,8 @@ img {
     margin-top: -20rem; }
   .footer__contacts {
     text-align: center;
-    margin-bottom: 3.07rem; }
+    margin-bottom: 3.07rem;
+    order: 1; }
   .footer__location, .footer__tel {
     font-family: 'Yeseva One', cursive;
     font-size: 1.428rem;
@@ -928,7 +929,14 @@ img {
     height: 33.21rem;
     max-width: 66.07rem;
     margin: auto;
-    margin-bottom: 4.8rem; }
+    margin-bottom: 4.8rem;
+    order: 2; }
+
+.hideonmobile {
+  display: block; }
+
+.hideondesktop {
+  display: none; }
 
 .sixsteps__wrapper {
   margin-top: -38rem;
@@ -1346,14 +1354,14 @@ img {
     font-size: 1.385rem; }
   .swiper-slide img {
     padding-top: 2rem; }
-  .swiper-hideonmobile {
-    display: none; }
-  .swiper-hideondesktop {
-    display: block; }
   .swiper-button-prev {
     left: 150px; }
   .swiper-button-next {
     left: 340px !important; }
+  .swiper-hideonmobile {
+    display: none; }
+  .swiper-hideondesktop {
+    display: block; }
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 8px; }
   .swiper-container-horizontal > .swiper-pagination-bullets {
@@ -1389,7 +1397,15 @@ img {
   .clients__wrapper {
     padding-bottom: 25rem; }
   .clients__person {
-    width: 100%; } }
+    width: 100%; }
+  .footer__contacts {
+    order: 2; }
+  .footer__map {
+    order: 1; }
+  .hideonmobile {
+    display: none; }
+  .hideondesktop {
+    display: block; } }
 
 @media screen and (min-width: 767px) {
   .section-title__description {
