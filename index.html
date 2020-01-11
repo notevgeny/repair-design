@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Верстка макета по методу БЭМ (Урок №14)</title>
+  <title>Верстка макета Design Repair</title>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
           <p class="hero__text wow fadeInLeft">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от
             стоимости материалов за счет организации работы</p>
           <button class="button hero__button button--primary wow fadeInLeft" data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow fadeInLeft">Оставить заявку</button>
+          <button class="button hero__button button--outline wow fadeInLeft" data-toggle="modal">Оставить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
@@ -214,14 +214,14 @@
         <p class="control__text wow lightSpeedIn" data-wow-duration="2s">
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
-        <form action="#" class="form control__form">
+        <form action="send2.php" method="POST" class="form control__form">
           <div class="control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" name="cUserName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <label for="cUserName" class="label form__label control__label">Имя</label>
+            <input type="text" name="cUserName" class="input form__input control__input" id="cUserName" placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" name="cUserPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="cUserPhone" class="label form__label control__label">Телефон</label>
+            <input type="tel" name="cUserPhone" class="input form__input control__input" id="cUserPhone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
@@ -729,18 +729,18 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3> 
-        <form action="#" class="form footer__form">
+        <form action="send3.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" name="fUserName" class="input footer__input form__input footer__input--light" id="user-name" placeholder="Как вас зовут:">
+            <label for="fUserName" class="label form__label label--light">Имя</label>
+            <input type="text" name="fUserName" class="input footer__input form__input footer__input--light" id="fUserName" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" name="fUserPhone" class="input footer__input form__input footer__input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="fUserPhone" class="label form__label label--light">Телефон</label>
+            <input type="tel" name="fUserPhone" class="input footer__input form__input footer__input--light" id="fUserPhone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light">Вопрос</label>
-            <input type="text" name="fUserQuestion" class="input footer__input form__input footer__input--light" id="user-question" placeholder="Я хочу спросить:">
+            <label for="fUserQuestion" class="label form__label label--light">Вопрос</label>
+            <input type="text" name="fUserQuestion" class="input footer__input form__input footer__input--light" id="fUserQuestion" placeholder="Я хочу спросить:">
         </div>
           <div class="policy footer__policy ">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox-2" class="policy__checkbox" checked>
@@ -801,7 +801,7 @@
     <div class="modal__dialog">
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-      <form action="#" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input modal__input--light" id="user-name" placeholder="Как вас зовут:">
