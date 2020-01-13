@@ -54,6 +54,7 @@ closeBtn.addEventListener('click', closeModal); //Закрывает модал�
 /* Jquery код */
 $(document).ready(function () {
   var modal = $('.modal'),
+      modalthanks = $('.modalthanks'),
       modalBtn = $('[data-toggle="modal"]'),
       closeBtn = $('.modal__close'),
       contactsButton = $('.contacts__button');
@@ -84,6 +85,28 @@ $(document).ready(function () {
 			modal.removeClass('modal--visible');					
 		}
   });
+
+
+     // Закрывает модальное окно благодарностей
+     closeBtn.on('click', function () {
+      modalthanks.removeClass('modal--visible');
+      return false;
+    });
+  
+  // Закрытие по клавише ESC
+    $(document).keydown(function(evt) {
+      if (evt.keyCode === 27) {
+        evt.stopPropagation();
+        modalthanks.removeClass('modal--visible');
+      }
+    });
+  
+    // Закрытие по клику мимо модального окна
+    $('.modalthanks').click(function(e) {
+      if ($(e.target).closest('.modal__dialog').length == 0) {
+        modalthanks.removeClass('modal--visible');					
+      }
+    });
   
   // Скролл наверх
     $(window).scroll(function () {
@@ -193,6 +216,19 @@ $(document).ready(function () {
         required: "Заполните поле",
         email: "Введите корректный Email в формате name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      //$(form).ajaxSubmit();
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalthanks.addClass('modal--visible');
+        }
+      });
     }
   });
 
@@ -217,6 +253,18 @@ $(document).ready(function () {
         minlength: jQuery.validator.format("Имя должно быть минимум {0} символа!"),
         maxlength: jQuery.validator.format("Имя должно быть не более {0} символов!")
       },
+    },
+    submitHandler: function(form) {
+      //$(form).ajaxSubmit();
+      $.ajax({
+        type: "POST",
+        url: "send2.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalthanks.addClass('modal--visible');
+        }
+      });
     }
   });
 
@@ -243,6 +291,18 @@ $(document).ready(function () {
         minlength: jQuery.validator.format("Имя должно быть минимум {0} символа!"),
         maxlength: jQuery.validator.format("Имя должно быть не более {0} символов!")
       },
+    },
+    submitHandler: function(form) {
+      //$(form).ajaxSubmit();
+      $.ajax({
+        type: "POST",
+        url: "send3.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalthanks.addClass('modal--visible');
+        }
+      });
     }
   });
 

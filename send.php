@@ -33,8 +33,12 @@ try {
      $mail->Body    = "Пользователь оставил данные. <br>
      Имя пользователя: ${userName}, <br>Телефон: ${userPhone}, <br>Почта: ${userEmail}";
 
-     $mail->send();
-     header('Location: thanks.html');
+     if ($mail->send()) {
+         echo "ok";
+     }
+     else {
+         echo "Заявку не удалось отправить. Ошибка Mailer: {$mail->ErrorInfo}";
+     }
 } catch (Exception $e) {
     echo "Заявку не удалось отправить. Ошибка Mailer: {$mail->ErrorInfo}";
 }

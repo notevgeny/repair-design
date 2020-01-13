@@ -33,8 +33,12 @@ try {
      $mymail->Body    = "Пользователь оставил данные из формы Онлайн-контроль. <br>
     Имя пользователя: ${cUserName}, <br>Телефон: ${cUserPhone}";
 
-     $mymail->send();
-     header('Location: thanks.html');
+    if ($mymail->send()) {
+        echo "ok";
+    }
+    else {
+        echo "Заявку не удалось отправить. Ошибка Mailer: {$mymail->ErrorInfo}";
+    }
 } catch (Exception $e) {
     echo "Заявку не удалось отправить. Ошибка Mailer: {$mymail->ErrorInfo}";
 }

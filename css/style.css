@@ -410,6 +410,11 @@ div.invalid {
 input.invalid {
   border-bottom: 1px solid tomato; }
 
+.group__link {
+  text-transform: uppercase;
+  color: #e3b873;
+  text-decoration: none; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -1108,7 +1113,7 @@ img {
   margin-bottom: 1.3rem;
   display: block; }
 
-.modal {
+.modal, .modalthanks {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1123,17 +1128,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .modal--visible {
+  .modal--visible, .modalthanks--visible {
     opacity: 1;
     visibility: visible; }
-  .modal__dialog {
+  .modal__dialog, .modalthanks__dialog {
     position: relative;
     max-width: 36.36rem;
     background-color: #131313;
     padding: 2.36rem 3.5rem 1.93rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     color: #ffffff; }
-  .modal__close {
+  .modal__close, .modalthanks__close {
     position: absolute;
     top: 0;
     right: 0;
@@ -1143,27 +1148,29 @@ img {
     border: none;
     margin: 12px;
     cursor: pointer; }
-  .modal__title {
+  .modal__title, .modalthanks__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.36rem;
     text-align: center;
     line-height: 26px;
     margin: 0;
     margin-bottom: 2.43rem; }
-  .modal__form {
+  .modal__form, .modalthanks__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input, .modalthanks__input {
     /*&:last-of-type
    margin-bottom: 1rem*/ }
-    .modal__input-group {
+    .modal__input-group, .modalthanks__input-group {
       display: flex;
       flex-direction: column;
       margin-bottom: 3.43rem; }
-  .modal__policy {
+  .modal__policy, .modalthanks__policy {
     margin-bottom: 2.7rem; }
-  .modal__button {
+  .modal__button, .modalthanks__button {
     align-self: flex-end; }
+  .modal__group-link, .modalthanks__group-link {
+    text-align: center; }
 
 .clients__wrapper {
   padding-bottom: 30rem; }

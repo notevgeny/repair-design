@@ -34,10 +34,14 @@ try {
      $onmymail->Body    = "Пользователь оставил данные из формы Подвала. <br>
 	Имя пользователя: ${fUserName}, <br>Телефон: ${fUserPhone}, <br> Сообщение: ${fUserQuestion}";
 
-     $onmymail->send();
-     header('Location: thanks.html');
-} catch (Exception $e) {
-    echo "Заявку не удалось отправить. Ошибка Mailer: {$onmymail->ErrorInfo}";
-}
+     if ($onmymail->send()) {
+          echo "ok";
+      }
+      else {
+          echo "Заявку не удалось отправить. Ошибка Mailer: {$onmymail->ErrorInfo}";
+      }
+  } catch (Exception $e) {
+      echo "Заявку не удалось отправить. Ошибка Mailer: {$onmymail->ErrorInfo}";
+  }
 
 ?>
