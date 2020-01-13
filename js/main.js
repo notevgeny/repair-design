@@ -57,6 +57,10 @@ $(document).ready(function () {
       modalthanks = $('.modalthanks'),
       modalBtn = $('[data-toggle="modal"]'),
       closeBtn = $('.modal__close'),
+      controlWrap = $('.control__form'),
+      controlWrapThanks = $('.control__wrap-thanks'),
+      footerWrap = $('.footer__wrap'),
+      footerWrapThanks = $('.footer__wrap-thanks'),
       contactsButton = $('.contacts__button');
 
    // Открывает модальное окно
@@ -262,7 +266,9 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modalthanks.addClass('modal--visible');
+          //modalthanks.addClass('modal--visible');
+          controlWrap.addClass('novision');
+          controlWrapThanks.removeClass('novision');
         }
       });
     }
@@ -300,7 +306,9 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modalthanks.addClass('modal--visible');
+          //modalthanks.addClass('modal--visible');
+          footerWrap.addClass('novision');
+          footerWrapThanks.removeClass('novision');
         }
       });
     }

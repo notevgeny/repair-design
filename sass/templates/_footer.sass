@@ -1,12 +1,12 @@
 .footer
  background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
  padding-top: 3rem
- &__wrap, &__contacts
+ &__wrap, &__contacts, &__wrap-thanks
   max-width: 63.07rem
   margin: auto
   padding: 2.5rem
   margin-bottom: 3.714rem
- &__wrap
+ &__wrap, &__wrap-thanks
   background: $black url('../img/form-lines.svg') no-repeat center
   margin-top: -20rem
  &__contacts
@@ -32,8 +32,15 @@
   font-weight: normal
   font-size: 1.428rem
   text-align: center
-  margin-bottom: 3.214rem
+  /*margin-bottom: 3.214rem*/
+  //margin-bottom: 1.6rem
   margin-top: 0
+ &__subtitle
+  font-size: 1.2rem
+  text-align: center
+  margin-bottom: 3.214rem
+  color: $light
+  text-transform: uppercase
  &__form
   display: flex
   flex-wrap: wrap
@@ -68,7 +75,8 @@
     order: 2
 .hideonmobile
    display: block
-.hideondesktop
+.hideondesktop, .novision
    display: none
+
   
  
